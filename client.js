@@ -2,7 +2,7 @@ var readline = require('readline'),
 socketio = require('socket.io-client');
 // util = require('util');
  
-var socket = socketio.connect('http://localhost:8080');
+var socket = socketio.connect(process.argv[2]);
 var rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.on('line', function (line) {
