@@ -7,7 +7,7 @@ io.sockets.on('connection', function (socket) {
  
     // Broadcast a user's message to everyone else in the room
     socket.on('send', function (data) {
-        console.log(data);
+        console.log(data.toString());
         io.sockets.emit('message', data);
     });
  
